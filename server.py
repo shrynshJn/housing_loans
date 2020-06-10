@@ -58,22 +58,22 @@ load_delhi_data()
 load_chennai_data()
 load_bangalore_data()
 
-@app.route('/data/mumbai', methods['GET'])
+@app.route('/data/mumbai', methods=['GET'])
 @cross_origin(supports_crentials=True)
 def get_mumbai():
     return mumbai_data
 
-@app.route('/data/delhi', methods['GET'])
+@app.route('/data/delhi', methods=['GET'])
 @cross_origin(supports_crentials=True)
 def get_delhi():
     return delhi_data
 
-@app.route('/data/chennai', methods['GET'])
+@app.route('/data/chennai', methods=['GET'])
 @cross_origin(supports_crentials=True)
 def get_chennai():
     return chennai_data
 
-@app.route('/data/banaglore', methods['GET'])
+@app.route('/data/banaglore', methods=['GET'])
 @cross_origin(supports_crentials=True)
 def get_banagalore():
     return bangalore_data
