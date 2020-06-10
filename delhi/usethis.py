@@ -28,5 +28,3 @@ def predict_price(bhk,locality,area=1000,bath=2,furnished='Semi-Furnished',parki
         x[trans_ind] = 1
         x[status_ind] = 1
     return model.predict([x])[0]
-
-print(predict_price(3,'Rohini',1200,3,'Unfurnished'))
