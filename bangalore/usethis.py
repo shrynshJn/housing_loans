@@ -1,9 +1,9 @@
 import pickle
 import numpy as np
-with open('bangalore.pickle','rb') as f:
+with open('./bangalore/bangalore.pickle','rb') as f:
     model = pickle.load(f)
 
-with open('locations.txt','r') as file:
+with open('./bangalore/locations.txt','r') as file:
     locs = file.read()
 
 l = locs.split(',')
