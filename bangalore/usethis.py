@@ -11,7 +11,12 @@ l = locs.split(',')
 X = np.array(l)
 
 def predict_price(location,sqft,bath,balcony,bhk):
-    loc_ind = np.where(X == location)[0][0]
+    print(X)
+    print(location)
+    loc_ind = np.where(X == location)
+    print(loc_ind)
+    loc_ind = loc_ind[0][0]
+    print(loc_ind)
     
     x = np.zeros(len(X))
     x[0] = sqft

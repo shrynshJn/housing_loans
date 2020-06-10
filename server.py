@@ -5,7 +5,8 @@ from mumbai.usethis import predict_price as mumbai
 from flask_cors import CORS, cross_origin
 from flask import Flask, request
 app = Flask(__name__)
-CORS(app, resource={r"/*": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app, resources={r"/*": {"origins": r"*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 mumbai_data = {}
@@ -59,22 +60,22 @@ load_chennai_data()
 load_bangalore_data()
 
 @app.route('/data/mumbai', methods=['GET'])
-@cross_origin(supports_crentials=True)
+@cross_origin(supports_credentials=True)
 def get_mumbai():
     return mumbai_data
 
 @app.route('/data/delhi', methods=['GET'])
-@cross_origin(supports_crentials=True)
+@cross_origin(supports_credentials=True)
 def get_delhi():
     return delhi_data
 
 @app.route('/data/chennai', methods=['GET'])
-@cross_origin(supports_crentials=True)
+@cross_origin(supports_credentials=True)
 def get_chennai():
     return chennai_data
 
-@app.route('/data/banaglore', methods=['GET'])
-@cross_origin(supports_crentials=True)
+@app.route('/data/bangalore', methods=['GET'])
+@cross_origin(supports_credentials=True)
 def get_banagalore():
     return bangalore_data
 
