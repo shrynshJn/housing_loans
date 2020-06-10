@@ -104,7 +104,7 @@ def delhi_predict():
     bath=int(data['bath'])
     furnished = data['furnished']
     parking = int(data['parking'])
-    status = data['Ready_to_move']
+    status = data['status']
     transaction= data['transaction']
     types=data['types']
     price = delhi(bhk, localality, area, bath, furnished, parking, status, transaction, types)
